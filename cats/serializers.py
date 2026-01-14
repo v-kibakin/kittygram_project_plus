@@ -11,6 +11,7 @@ class CatSerializer(serializers.ModelSerializer):
 
 
 class OwnerSerializer(serializers.ModelSerializer):
+    cats = serializers.StringRelatedField(many=True, read_only=True)
 
     class Meta:
         model = Owner

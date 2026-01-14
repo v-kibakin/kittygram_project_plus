@@ -7,7 +7,7 @@ from cats.views import CatViewSet, OwnerViewSet
 
 router = DefaultRouter()
 router.register('cats', CatViewSet)
-router.register('owner', OwnerViewSet)
+router.register('owners', OwnerViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),

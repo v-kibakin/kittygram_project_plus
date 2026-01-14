@@ -4,6 +4,7 @@ from .models import Cat, Owner
 
 
 class CatSerializer(serializers.ModelSerializer):
+    owner = serializers.StringRelatedField(read_only=True)
 
     class Meta:
         model = Cat

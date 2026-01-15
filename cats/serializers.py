@@ -33,7 +33,15 @@ class CatSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Cat
-        fields = ('id', 'name', 'color', 'birth_year', 'owner', 'achievements', 'age')
+        fields = (
+            'id',
+            'name',
+            'color',
+            'birth_year',
+            'owner',
+            'achievements',
+            'age'
+        )
 
     def get_age(self, obj):
         return dt.datetime.now().year - obj.birth_year

@@ -27,6 +27,7 @@ class AchievementSerializer(serializers.ModelSerializer):
 class CatSerializer(serializers.ModelSerializer):
     achievements = AchievementSerializer(many=True, required=False)
     age = serializers.SerializerMethodField()
+    color = Hex2NameColor()
 
     class Meta:
         model = Cat
